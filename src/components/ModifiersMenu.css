@@ -1,0 +1,10 @@
+#modifiers-menu-list {
+    list-style: none;
+    width: 30%;
+}
+#modifiers-menu-list > li {
+    padding: 5px 0px 5px 10px;
+}
+#modifiers-menu-list > li:hover {
+    cursor: pointer;
+}

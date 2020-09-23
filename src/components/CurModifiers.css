@@ -1,0 +1,5 @@
+.curmodifiers-container {
+    display: flex;
+    background-color: lightgray;
+    width: fit-content;
+}
