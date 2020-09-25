@@ -25,18 +25,18 @@ export default class ModifiersMenu extends Component {
         e.preventDefault();
         let string1 = this.state.input1.trim();
         let string2 = this.state.input2.trim();
-        console.log(curMenu)
         let filteredInput = storeFunctions[curMenu](string1, string2);
         store.modArr.push(filteredInput);
-        //this.refs.input1.value = ''; ref='input1'
-        //this.refs.input2.value = ''; ref='input2'
     }
     render() {
         return (
             <>
                 <ul id='modifiers-menu-list'>
+                    <li onClick={this.menuSelect} id='GeneralMatch'>General Match</li>
                     <li onClick={this.menuSelect} id='ExactMatch'>Exact Match</li>
                     <li onClick={this.menuSelect} id='OR'>OR</li>
+                    <li onClick={this.menuSelect} id='DontInclude'>Don't Include</li>
+                    <li onClick={this.menuSelect} id='SiteSearch'>Site Search</li>
                 </ul>
                 <div id='modifiers-menu-form' className='hidden'>
                     <h3>{this.state.modObj.title}</h3>

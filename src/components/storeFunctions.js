@@ -1,3 +1,10 @@
+function GeneralMatch(string) {
+    let obj = {
+        display: `${string}`,
+        url: `q=${string}`
+    }
+    return obj;
+}
 function ExactMatch(string) {
     let obj = {
         display: `"${string}"`,
@@ -12,6 +19,23 @@ function OR(string1, string2) {
     }
     return obj;
 }
+function DontInclude(string) {
+    let obj = {
+        display: `-${string}`,
+        url: `as_eq=${string}`
+    }
+    return obj;
+}
+function SiteSearch(string) {
+    let obj = {
+        display: `results from ${string}`,
+        url: `as_sitesearch=${string}`
+    }
+    return obj;
+}
 
+exports.GeneralMatch = GeneralMatch;
 exports.ExactMatch = ExactMatch;
 exports.OR = OR;
+exports.DontInclude = DontInclude;
+exports.SiteSearch = SiteSearch;
