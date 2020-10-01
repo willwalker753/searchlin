@@ -7,6 +7,7 @@ export default class CurModifiers extends Component {
         super(props)
         this.state = {
              modArr: [],
+             boolArr: [],
         };
     }
     componentDidMount() {
@@ -14,6 +15,7 @@ export default class CurModifiers extends Component {
     }
     getArr = () => {
         this.setState ({ modArr: store.modArr })
+        this.setState ({ boolArr: store.boolArr })
     }
     deleteMod = mod => {
         let modArr = this.state.modArr;
@@ -31,6 +33,11 @@ export default class CurModifiers extends Component {
                     <div className='curmodifiers-container' onClick={() => { this.deleteMod({mod}) }} key={i}>
                         <p>{mod.display}</p>
                         <i className="fas fa-minus-circle"></i>
+                    </div>
+                ))}
+                {this.state.boolArr.map((mod, i) => (
+                    <div className={'curmodifiers-container '+mod.value} key={i}>
+                        <p>{mod.name}</p>
                     </div>
                 ))}
             </>

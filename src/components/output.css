@@ -1,7 +1,46 @@
 #output-container {
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#output-container > button {
+    margin-right: 20px;
+    font-size: 15px!important;
+    padding-top: 3px;
+    width: 26px;
+    height: 26px;
+    border-radius: 14px;
+}
+#output-search-bar {
+    display: flex;
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+    padding: 10px 12px;
+    border-radius: 20px;
+    color: black;
 }
 #output-google-logo {
-    width: 20px
+    height: 20px;
+    width: 20px;
+    margin-right: 15px;
+}
+#output-search-bar > p {
+    margin-left: 15px;
+}
+#output-search-bar > form > select, #output-search-bar > a > button, #output-container > button {
+    border: none;
+    background-color: rgb(240, 240, 240);
+    outline: none;
+    font-size: 12px;
+}
+#output-search-bar > a > button {
+    font-size: 16px!important;
+    margin-left: 20px;
+    margin-right: 3px;
+}
+#output-search-bar > form > select:hover, #output-container > button:hover, #output-search-bar > a > button:hover{
+    cursor: pointer;
 }
