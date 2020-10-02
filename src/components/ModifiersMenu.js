@@ -11,6 +11,7 @@ export default class ModifiersMenu extends Component {
              modObj: {title: '', desc: '', img: '', placeholder: ''},
              input1: '',
              input2: '',
+             noinputtext: '',
         };
     }
     handleChange = e => {
@@ -34,8 +35,14 @@ export default class ModifiersMenu extends Component {
         e.preventDefault();
         let string1 = this.state.input1.trim();
         let string2 = this.state.input2.trim();
-        let filteredInput = storeFunctions[curMenu](string1, string2);
-        store.modArr.push(filteredInput);
+        if(string1 === '') {
+            this.setState({ noinputtext: 'Nope, you gotta enter something first!' });
+        }
+        else {
+            this.setState({ noinputtext: '' });
+            let filteredInput = storeFunctions[curMenu](string1, string2);
+            store.modArr.push(filteredInput);
+        }
     }
     render() {
         return (
@@ -81,6 +88,7 @@ export default class ModifiersMenu extends Component {
                         <input type='text'  name='input2' onChange={this.handleChange} placeholder={this.state.modObj.placeholder2} className={this.state.modObj.input2}/>
                         <button type='submit' onClick={this.submit}>Enter</button>
                     </form>
+        <p id='no-input-text'>{this.state.noinputtext}</p>
                 </div>
             </div>
         )

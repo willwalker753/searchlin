@@ -27,15 +27,22 @@ export default class CurModifiers extends Component {
     deleteMod = mod => {
         let modArr = this.state.modArr;
         let index = modArr.indexOf(mod.mod);
-        if (index > -1) {
-            modArr.splice(index, 1);
-          }
-        console.log(index)
-        store.modArr = modArr;
+        document.getElementById('cur'+index).className='curmodifiers-container curmodifiers-delete';
+        setTimeout(() => { 
+            if (index > -1) {
+                modArr.splice(index, 1);
+            }
+            store.modArr = modArr;          
+                setTimeout(() => {
+                    if(store.modArr[index]) {
+                        document.getElementById('cur'+index).className='curmodifiers-container';
+                    }
+                }, 250);
+        }, 1300);
     }
     buttonHoverOn = e => {
         try {
-            document.getElementById(e.target.id).className= 'curmodifiers-container mod-ani-on';    
+            document.getElementById(e.target.id).className = 'curmodifiers-container mod-ani-on';    
             let num = e.target.id;
             num = num.slice(3,num.length);
             minusArr[num] = 'fas fa-minus-circle circle-ani-on';    
@@ -44,10 +51,12 @@ export default class CurModifiers extends Component {
     }
     buttonHoverOff = e => {
         try {
-            document.getElementById(e.target.id).className='curmodifiers-container mod-ani-off';  
-            let num = e.target.id;
-            num = num.slice(3,num.length); 
-            minusArr[num] = 'fas fa-minus-circle circle-ani-off';   
+            if(document.getElementById(e.target.id).className !== 'curmodifiers-container curmodifiers-delete') {
+                document.getElementById(e.target.id).className ='curmodifiers-container mod-ani-off';  
+                let num = e.target.id;
+                num = num.slice(3,num.length); 
+                minusArr[num] = 'fas fa-minus-circle circle-ani-off';  
+            }  
         }
         catch { return; }
     }
@@ -55,7 +64,7 @@ export default class CurModifiers extends Component {
         return (
             <div id='curmodifiers'>
                 {this.state.modArr.map((mod, i) => (
-                    <div onMouseEnter={this.buttonHoverOn} onMouseLeave={this.buttonHoverOff} id={'cur'+i}className='curmodifiers-container' onClick={() => { this.deleteMod({mod}) }} key={i}>
+                    <div onMouseEnter={this.buttonHoverOn} onMouseLeave={this.buttonHoverOff} id={'cur'+i} className='curmodifiers-container' onClick={() => { this.deleteMod({mod}) }} key={i}>
                         <p>{mod.display}</p>
                         <i className={minusArr[i]}></i>
                     </div>

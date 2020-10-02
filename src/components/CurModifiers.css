@@ -4,6 +4,7 @@
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 20px;
+    height: 53px;
 }
 .curmodifiers-container {
     display: flex;
@@ -20,6 +21,77 @@
 }
 .curmodifiers-container:hover {
     cursor: pointer;
+}
+.circle-ani-on {
+    animation: circle-ani-on .5s 1 forwards;
+}
+@keyframes circle-ani-on {
+    0% {
+        color: white;
+        font-size: 14px;
+    }
+    100% {
+        color: rgb(255, 29, 29);
+        font-size: 16px;
+    }
+}
+.circle-ani-off {
+    animation: circle-ani-off .5s 1 forwards;
+}
+@keyframes circle-ani-off {
+    0% {
+        color: rgb(255, 29, 29);
+        font-size: 16px;
+    }
+    100% {
+        color: white;
+        font-size: 14px;
+    }
+}
+.mod-ani-on {
+    animation: mod-ani-on .8s 1 forwards;
+}
+@keyframes mod-ani-on {
+    0% {
+        transform: skewX(0deg);
+    }
+    100% {
+        transform: skewX(10deg);
+    }
+}
+.mod-ani-off {
+    animation: mod-ani-off .5s 1 forwards;
+}
+@keyframes mod-ani-off {
+    0% {
+        transform: skewX(10deg);
+    }
+    100% {
+        transform: skewX(0deg);
+    }
+}
+.curmodifiers-delete {
+    animation: curmodifiers-delete 5s 1 forwards;
+}
+@keyframes curmodifiers-delete {
+    0% {
+        opacity: 1;
+        transform: skewX(10deg);
+    }
+    5% {
+        opacity: .5;
+        transform: skewX(10deg);
+    }
+    18% {
+        letter-spacing: 4px;
+        opacity: 0;
+        transform: skewX(10deg);
+        height: auto;
+    }
+    100% {
+        opacity: 0;
+        height: 0px;
+    }
 }
 .false {
     display: none;
