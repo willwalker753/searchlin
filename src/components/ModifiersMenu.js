@@ -39,23 +39,34 @@ export default class ModifiersMenu extends Component {
     }
     render() {
         return (
-            <>
+            <div id='modifiers-menu'>
                 <ul id='modifiers-menu-list'>
                     <li onClick={this.menuSelect} id='GeneralMatch'>General Match</li>
+                    <hr/>
                     <li onClick={this.menuSelect} id='ExactMatch'>Exact Match</li>
+                    <hr/>
                     <li onClick={this.menuSelect} id='OR'>Or</li>
+                    <hr/>
                     <li onClick={this.menuSelect} id='DontInclude'>Don't Include</li>
+                    <hr/>
                     <li onClick={this.menuSelect} id='SiteSearch'>Site Search</li>
+                    <hr/>
                     <li onClick={this.menuSelect} id='FileType'>File Type</li>
+                    <hr/>
                     <li onClick={this.menuSelect} id='RelatedSite'>Related Sites</li>
+                    <hr/>
                     <li onClick={this.menuSelect} id='LinkedSite'>Linked Sites</li>
+                    <hr/>
                     <form>
                         <input type='checkbox' id='safe' name='safe' onClick={this.handleToggle}/>
                         <label htmlFor='safe'>Safe Search</label><br/>
+                        <hr/>
                         <input type='checkbox' id='newWindow' name='newWindow' onClick={this.handleToggle}/>
                         <label htmlFor='newWindow'>New Window</label><br/>
+                        <hr/>
                         <input type='checkbox' id='personalizedSearch' name='personalizedSearch' onClick={this.handleToggle}/>
                         <label htmlFor='personalizedSearch'>Personalized Search Off</label><br/>
+                        <hr/>
                         <input type='checkbox' id='adTest' name='adTest' onClick={this.handleToggle}/>
                         <label htmlFor='adTest'>AdWords DB Disconnect</label><br/>
                     </form>
@@ -71,7 +82,7 @@ export default class ModifiersMenu extends Component {
                         <button type='submit' onClick={this.submit}>Enter</button>
                     </form>
                 </div>
-            </>
+            </div>
         )
     }
 }

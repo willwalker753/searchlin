@@ -1,7 +1,25 @@
+#curmodifiers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
 .curmodifiers-container {
     display: flex;
-    background-color: lightgray;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid white;
+    padding: 4px 6px 5px 9px;
+    border-radius: 15px;
+    margin: 10px;
     width: fit-content;
+}
+.curmodifiers-container > i {
+    padding-left: 10px;
+}
+.curmodifiers-container:hover {
+    cursor: pointer;
 }
 .false {
     display: none;

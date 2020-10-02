@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import store from './store';
 import './CurModifiers.css';
 
+let minusArr = [];
 export default class CurModifiers extends Component {
     constructor(props) {
         super(props)
@@ -15,7 +16,13 @@ export default class CurModifiers extends Component {
     }
     getArr = () => {
         this.setState ({ modArr: store.modArr })
-        this.setState ({ boolArr: store.boolArr })
+        this.setState ({ boolArr: store.boolArr });
+        if(store.modArr.length !== minusArr.length) {
+            minusArr = [];
+            for(let i=0; i<store.modArr.length; i++) {
+                minusArr[i] = 'fas fa-minus-circle';
+            }
+        }
     }
     deleteMod = mod => {
         let modArr = this.state.modArr;
@@ -26,13 +33,31 @@ export default class CurModifiers extends Component {
         console.log(index)
         store.modArr = modArr;
     }
+    buttonHoverOn = e => {
+        try {
+            document.getElementById(e.target.id).className= 'curmodifiers-container mod-ani-on';    
+            let num = e.target.id;
+            num = num.slice(3,num.length);
+            minusArr[num] = 'fas fa-minus-circle circle-ani-on';    
+        }
+        catch { return; }
+    }
+    buttonHoverOff = e => {
+        try {
+            document.getElementById(e.target.id).className='curmodifiers-container mod-ani-off';  
+            let num = e.target.id;
+            num = num.slice(3,num.length); 
+            minusArr[num] = 'fas fa-minus-circle circle-ani-off';   
+        }
+        catch { return; }
+    }
     render() {
         return (
-            <>
+            <div id='curmodifiers'>
                 {this.state.modArr.map((mod, i) => (
-                    <div className='curmodifiers-container' onClick={() => { this.deleteMod({mod}) }} key={i}>
+                    <div onMouseEnter={this.buttonHoverOn} onMouseLeave={this.buttonHoverOff} id={'cur'+i}className='curmodifiers-container' onClick={() => { this.deleteMod({mod}) }} key={i}>
                         <p>{mod.display}</p>
-                        <i className="fas fa-minus-circle"></i>
+                        <i className={minusArr[i]}></i>
                     </div>
                 ))}
                 {this.state.boolArr.map((mod, i) => (
@@ -40,7 +65,7 @@ export default class CurModifiers extends Component {
                         <p>{mod.name}</p>
                     </div>
                 ))}
-            </>
+            </div>
         )
     }
 }
