@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import google from '../pictures/google-logo-white.png';
 import store from './store';
 import storeFunctions from './storeFunctions';
-import './Output.css';
+import './output.css';
 
 export default class Output extends Component {
     constructor(props) {
