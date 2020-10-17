@@ -81,7 +81,7 @@ export default class ModifiersMenu extends Component {
                 <div id='modifiers-menu-form' className='hidden'>
                     <h3>{this.state.modObj.title}</h3>
                     <p>{this.state.modObj.desc}</p>
-                    <img src={this.state.modObj.img} alt='modifier representation'/>
+                    <img src={this.state.modObj.img} id='modifiers-menu-form-pic' alt='modifier representation'/>
                     <form>
                         <input type='text'  name='input1' onChange={this.handleChange} placeholder={this.state.modObj.placeholder1}/>
                         <p className={this.state.modObj.input2}>{this.state.modObj.joiner}</p>
