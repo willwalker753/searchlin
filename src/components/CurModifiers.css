@@ -31,7 +31,7 @@
         font-size: 14px;
     }
     100% {
-        color: rgb(255, 29, 29);
+        /*color: rgb(255, 29, 29);*/
         font-size: 16px;
     }
 }
@@ -40,7 +40,7 @@
 }
 @keyframes circle-ani-off {
     0% {
-        color: rgb(255, 29, 29);
+        /*color: rgb(255, 29, 29);*/
         font-size: 16px;
     }
     100% {

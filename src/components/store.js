@@ -1,5 +1,5 @@
 const Obj = function() {
-    const GeneralMatch = {title: 'General Match', desc: 'Matches search terms to generic matches', img: 'https://github.com/willwalker753/searchlin/blob/master/src/pictures/GeneralMatch.png?raw=true/', placeholder1: 'shoes', input2: 'remove'};
+    const GeneralMatch = {title: 'General Match', desc: 'Find generic matches with these terms', img: 'https://github.com/willwalker753/searchlin/blob/master/src/pictures/GeneralMatch.png?raw=true/', placeholder1: 'shoes', input2: 'remove'};
     const ExactMatch = {title: 'Exact Match', desc: 'Only verbatim results', img: 'https://github.com/willwalker753/searchlin/blob/master/src/pictures/ExactMatch.png?raw=true/', placeholder1: 'cheesy garlic bread', input2: 'remove'};
     const OR = {title: 'Or', desc: 'Find results for either', img: 'https://github.com/willwalker753/searchlin/blob/master/src/pictures/Or.png?raw=true/', placeholder1: 'Gates', joiner: 'OR', placeholder2: 'Jobs',input2: ''};
     const DontInclude = {title: "Don't Include", desc: 'Remove results with these words', img: 'https://github.com/willwalker753/searchlin/blob/master/src/pictures/DontInclude.png?raw=true/', placeholder1: 'Microsoft', input2: 'remove'};

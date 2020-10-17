@@ -81,14 +81,14 @@ export default class ModifiersMenu extends Component {
                 <div id='modifiers-menu-form' className='hidden'>
                     <h3>{this.state.modObj.title}</h3>
                     <p>{this.state.modObj.desc}</p>
-                    <img src={this.state.modObj.img} id='modifiers-menu-form-pic' alt='modifier representation'/>
+                    {/*<img src={this.state.modObj.img} id='modifiers-menu-form-pic' alt='modifier representation'/> doesn't really look that good with pics*/}
                     <form>
                         <input type='text'  name='input1' onChange={this.handleChange} placeholder={this.state.modObj.placeholder1}/>
                         <p className={this.state.modObj.input2}>{this.state.modObj.joiner}</p>
                         <input type='text'  name='input2' onChange={this.handleChange} placeholder={this.state.modObj.placeholder2} className={this.state.modObj.input2}/>
-                        <button type='submit' onClick={this.submit}>Enter</button>
+                        <button type='submit' onClick={this.submit}><i className="fas fa-plus-circle"></i></button>
                     </form>
-        <p id='no-input-text'>{this.state.noinputtext}</p>
+                <p id='no-input-text'>{this.state.noinputtext}</p>
                 </div>
             </div>
         )
