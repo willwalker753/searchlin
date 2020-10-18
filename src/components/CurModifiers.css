@@ -83,7 +83,7 @@
         transform: skewX(10deg);
     }
     18% {
-        letter-spacing: 4px;
+        letter-spacing: 3px;
         opacity: 0;
         transform: skewX(10deg);
         height: auto;

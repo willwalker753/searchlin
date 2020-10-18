@@ -18,7 +18,7 @@
     color: white;
 }
 #output-container > button:hover {
-    animation: Rotate 1.5s .2s infinite forwards;
+    animation: Rotate 1.5s .3s infinite forwards;
 }
 @keyframes Rotate {
     0% {

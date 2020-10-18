@@ -17,17 +17,30 @@
 }
 #modifiers-menu-list > li {
     padding: 5px 0px 5px 5px;
+    -webkit-user-select: none;    
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 #modifiers-menu-list > li:hover, #modifiers-menu-list > form > input:hover, #modifiers-menu-list > form > label:hover {
     cursor: pointer;
 }
-#modifiers-menu-list > form > input {
-    margin: 7px 0px 7px 10px;
+#modifiers-menu-list > form > i {
+    margin: 7px 0px 7px 6px;
     
 }
 #modifiers-menu-list > form > label {
-    padding-left: 5px;
+    padding-left: 25px;
     padding-right: 10px;
+    position: relative;
+    right: 20px;
+    -webkit-user-select: none;    
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#modifiers-menu-list > form > input {
+    display: none;
 }
 #modifiers-menu-form {
     width: 250px;
@@ -42,18 +55,29 @@
     padding: 2px 15px 3px 6px;
     border-radius: 5px;
     outline: none;
-
+    font-size: 16px;
 }
 #modifiers-menu-form > form > button {
-    border: none;
+    border: 2px solid white;
+    border-radius: 13px;
+    height: 25px;
+    width: 25px;   
     color: white;
     background-color: rgba(255, 255, 255, 0);
-    padding: 8px;
+    padding: 4px;
     outline: none;
-    font-size: 16px;
+    font-size: 12px;
+    margin-left: 10px;
+    position: relative;
+    bottom: 1px;
 } 
+#modifiers-menu-form > form > button > i {
+    position: relative;
+    bottom: 1px;
+    left: 0px;
+}
 #modifiers-menu-form > form > button:hover {
-    animation: addSpin 1.5s .2s infinite forwards;
+    animation: addSpin 1.5s .3s infinite forwards;
     cursor: pointer;
 }
 @keyframes addSpin {
