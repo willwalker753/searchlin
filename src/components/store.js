@@ -1,5 +1,5 @@
 const Obj = function() {
-    const Default = {title: 'How do I use this?', desc: "Searchlin is an advanced Google search creator. By selecting an option on the left you can add a modifier to your search. You can remove search terms indivually or remove all with the arrow circle above. Don't forget about the time search in the bar above", img: 'https://github.com/willwalker753/searchlin/blob/master/src/pictures/LinkedSite.png?raw=true/', placeholder1: '', input1: 'remove', input2: 'remove', button: 'remove',};
+    const Default = {title: 'How do I use this?', desc: "Searchlin is an advanced Google search creator. By selecting an option in that list you can add a modifier to your search. You can remove search terms indivually or start fresh with the circle button above. And don't forget about the time search feature next to the url", img: 'https://github.com/willwalker753/searchlin/blob/master/src/pictures/LinkedSite.png?raw=true/', placeholder1: '', input1: 'remove', input2: 'remove', button: 'remove',};
     const GeneralMatch = {title: 'General Match', desc: 'Find generic matches', img: 'https://github.com/willwalker753/searchlin/blob/master/src/pictures/GeneralMatch.png?raw=true/', placeholder1: 'shoes', input1: '', input2: 'remove'};
     const ExactMatch = {title: 'Exact Match', desc: 'Only verbatim results', img: 'https://github.com/willwalker753/searchlin/blob/master/src/pictures/ExactMatch.png?raw=true/', placeholder1: 'cheesy garlic bread', input1: '', input2: 'remove'};
     const OR = {title: 'Or', desc: 'Find results for either', img: 'https://github.com/willwalker753/searchlin/blob/master/src/pictures/Or.png?raw=true/', placeholder1: 'Gates', joiner: 'OR', placeholder2: 'Jobs',input1: '', input2: ''};
@@ -12,8 +12,8 @@ const Obj = function() {
     let boolArr = [
         {name:'Safe Search', id: 'safe', value: false, url: 'safe=active'},
         {name:'New Window', id: 'newWindow', value: false, url: 'newwindow=1'},
-        {name:'Personalized Search Off', id: 'personalizedSearch', value: false, url: 'pws=0'},
-        {name:'AdWords DB Disconnected', id: 'adTest', value: false, url: 'adtest=off'},
+        {name:'Personalized Search', id: 'personalizedSearch', value: false, url: 'pws=0'},
+        {name:'AdWords DB', id: 'adTest', value: false, url: 'adtest=off'},
     ];
     let modArr = [];
 

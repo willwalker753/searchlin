@@ -91,3 +91,38 @@
         transform: rotateX(360deg);
     }
 }
+@media only screen and (max-width: 1200px) {
+    #modifiers-menu {
+        width: 75%;
+    }
+}
+@media only screen and (max-width: 700px) {
+    #modifiers-menu {
+        width: 95%;
+    }
+}
+@media only screen and (max-width: 500px) {
+    #modifiers-menu-list {
+        width: 185px;
+    }
+    #modifiers-menu-list > form > label {
+        padding-right: 0px;
+    }
+    #modifiers-menu-form {
+        width: 150px;
+        margin-left: 10px;
+    }
+    #modifiers-menu-form > form > input {
+        width: 150px;
+    }
+    #modifiers-menu-form > form > button {
+        margin: 0px;
+        float: right;
+        position: relative;
+        bottom: 35px;
+        left: 30px;
+    }
+    #modifiers-menu {
+        justify-content: flex-start;
+    }
+}

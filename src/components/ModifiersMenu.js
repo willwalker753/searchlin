@@ -29,6 +29,7 @@ export default class ModifiersMenu extends Component {
         this.setState({ [e.target.name]: e.target.value});
     }
     menuSelect = e => {
+        this.setState({ noinputtext: '' });
         if((e.target.id === curMenu.name)&&(curMenu.clicks === 0)){
             this.setState({ modObj: store.Default});
             curMenu.clicks = 1;
@@ -88,7 +89,7 @@ export default class ModifiersMenu extends Component {
                     <form>
                         <input type='checkbox' className='checkbox' id='safe' name='safe' onClick={this.handleToggle}/>
                         <i className={this.state.safeBox}></i>
-                        <label htmlFor='safe'>Safe Search</label><br/>
+                        <label htmlFor='safe'>Safe Search On</label><br/>
                         <hr/>
                         <input type='checkbox' className='checkbox' id='newWindow' name='newWindow' onClick={this.handleToggle}/>
                         <i className={this.state.newWindowBox}></i>
@@ -96,11 +97,11 @@ export default class ModifiersMenu extends Component {
                         <hr/>
                         <input type='checkbox' className='checkbox' id='personalizedSearch' name='personalizedSearch' onClick={this.handleToggle}/>
                         <i className={this.state.personalizedSearchBox}></i>
-                        <label htmlFor='personalizedSearch'>Personalized Search Off</label><br/>
+                        <label htmlFor='personalizedSearch'>Personalized Off</label><br/>
                         <hr/>
                         <input type='checkbox' className='checkbox' id='adTest' name='adTest' onClick={this.handleToggle}/>
                         <i className={this.state.adTestBox}></i>
-                        <label htmlFor='adTest'>AdWords DB Disconnect</label><br/>
+                        <label htmlFor='adTest'>AdWords DB Off</label><br/>
                     </form>
                 </ul>
                 <div id='modifiers-menu-form'>
